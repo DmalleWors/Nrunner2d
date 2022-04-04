@@ -5,7 +5,7 @@ using UnityEngine;
 public class Cameramovement : MonoBehaviour
 {
     [SerializeField] private LayerMask groundLayers;
-    [SerializeField] private float runSpeed = 0f;
+    [SerializeField] private float runSpeed = 5f;
 
 
     private CharacterController characterController;

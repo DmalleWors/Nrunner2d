@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Deathzone : MonoBehaviour
 {
-    void OnTriggerEnter(Collider2D collision) {
-
-        Destroy(collision.gameObject);
+    public void OnTriggerEnter2D(Collider2D other){
+        Debug.Log("dababt");
+        Destroy(other.gameObject);
     }
 }

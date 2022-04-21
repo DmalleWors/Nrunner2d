@@ -25,15 +25,8 @@ public class playerscript : MonoBehaviour
             Destroy(gameObject);
         }
         Vector2 movement = new Vector2(0, rigidbody2d.velocity.y);
-        if (Input.GetKey(KeyCode.A))
-        {
-            movement.x = -Speed * Time.deltaTime;
-        }
-
-        else if (Input.GetKey(KeyCode.D))
-        {
-            movement.x = Speed * Time.deltaTime;
-        }
+        float horizontal = Input.GetAxis("Horizontal");
+        movement.x = horizontal * Speed * Time.deltaTime;
 
         rigidbody2d.velocity = movement;
 

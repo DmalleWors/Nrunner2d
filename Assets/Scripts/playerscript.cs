@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class playerscript : MonoBehaviour
 {
-    [SerializeField] private LayerMask PlatformlayerMask;
+[SerializeField] private LayerMask PlatformlayerMask;
     private Rigidbody2D rigidbody2d;
     private BoxCollider2D boxcollider2d;
     public float Speed;
     bool Invincible;
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,9 @@ public class playerscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    
+
         if(!GetComponentInChildren<SpriteRenderer>().isVisible && Invincible){
             Debug.Log("out");
             Destroy(gameObject);

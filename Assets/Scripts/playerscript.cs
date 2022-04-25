@@ -25,7 +25,6 @@ public class playerscript : MonoBehaviour
     
 
         if(!GetComponentInChildren<SpriteRenderer>().isVisible && Invincible){
-            Debug.Log("out");
             Destroy(gameObject);
         }
         Vector2 movement = new Vector2(0, rigidbody2d.velocity.y);

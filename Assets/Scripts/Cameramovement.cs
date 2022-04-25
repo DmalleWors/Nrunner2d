@@ -11,7 +11,7 @@ public class Cameramovement : MonoBehaviour
     void Update()
     {
         increasespeed += Speedtoincrease * Time.deltaTime;
-        increasespeed = Mathf.Clamp(increasespeed, 0, 1500);
+        increasespeed = Mathf.Clamp(increasespeed, 0, 2000);
         transform.position += new Vector3(Speed * Time.deltaTime,0,0);
     }
 

@@ -15,9 +15,9 @@ private void Awake() {
     lastEndPosition = Start.Find("EndPosition").position;
 }
 private void Update() {
-    Debug.Log(Vector3.Distance(player.position,lastEndPosition));
+    if(player == null) return;
+    
     if(Vector3.Distance(player.position,lastEndPosition) < 50){
-        Debug.Log(Vector3.Distance(player.position,lastEndPosition));
         SpawnLevelPart();
     }
 }

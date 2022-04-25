@@ -28,6 +28,10 @@ public class Timemanager : MonoBehaviour
     }
     public void stopandsave(){
         runTimer = false;
-        PlayerPrefs.SetFloat("Highscore", timeInLevel);
+        float lastscore = PlayerPrefs.GetFloat("Highscore");
+        if(lastscore <  timeInLevel)
+        {
+            PlayerPrefs.SetFloat("Highscore", timeInLevel);
+        }
     }
 }

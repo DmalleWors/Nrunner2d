@@ -35,7 +35,7 @@ public class playerscript : MonoBehaviour
 
         if (isGrounded() && Input.GetKeyDown(KeyCode.W))
         {
-            float jumpVelocity = 50f;
+            float jumpVelocity = 40f;
             rigidbody2d.velocity = Vector2.up * jumpVelocity;
         }
     }

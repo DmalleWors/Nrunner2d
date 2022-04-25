@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Cameramovement : MonoBehaviour
-{   public float Speed;
-    public float Speedtoincrease;
+{  public float Speedtoincrease;
     private float increasespeed;
     // Start is called before the first frame update
   
     void Update()
     {
         increasespeed += Speedtoincrease * Time.deltaTime;
-        increasespeed = Mathf.Clamp(increasespeed, 0, 2000);
-        transform.position += new Vector3(Speed * Time.deltaTime,0,0);
+        increasespeed = Mathf.Clamp(increasespeed, 0, 10);
+        transform.position += new Vector3(increasespeed * Time.deltaTime,0,0);
     }
 
 }

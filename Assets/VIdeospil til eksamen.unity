@@ -1076,6 +1076,7 @@ MonoBehaviour:
   - {fileID: 5489753632138003288, guid: d315d27d81952254ba9f355000133b4e, type: 3}
   - {fileID: 1003770301666148427, guid: 9a98a3cacb3bda144874050a37be4e8b, type: 3}
   - {fileID: 7009458284087673842, guid: 1ffe53280117a8c4f8ced3c4be405c72, type: 3}
+  - {fileID: 6841645958671065371, guid: 436b7636c8d218e44a0cef90a3352c85, type: 3}
   player: {fileID: 1476898796}
 --- !u!4 &1813627943
 Transform:

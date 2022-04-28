@@ -6,7 +6,8 @@ public class Highscore_save : MonoBehaviour
 {
     public Timemanager  TM;
   public void OnDestroy(){
-    
+    {
     TM.stopandsave();
   }
+}
 }

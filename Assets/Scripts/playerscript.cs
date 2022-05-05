@@ -10,6 +10,7 @@ public class playerscript : MonoBehaviour
     public float Speed;
     bool Invincible;
     public Animator animator;
+    public GameObject deathtext;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +20,14 @@ public class playerscript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
     
 
         if(!GetComponentInChildren<SpriteRenderer>().isVisible && Invincible){
             Destroy(gameObject);
+            deathtext.gameObject.SetActive(true);
         }
         Vector2 movement = new Vector2(0, rigidbody2d.velocity.y);
         float horizontal = Input.GetAxis("Horizontal");
@@ -33,7 +35,7 @@ public class playerscript : MonoBehaviour
 
         rigidbody2d.velocity = movement;
 
-        if (isGrounded() && Input.GetKeyDown(KeyCode.W))
+        if (isGrounded() && Input.GetAxis("Vertical") > 0.2)
         {
             float jumpVelocity = 40f;
             rigidbody2d.velocity = Vector2.up * jumpVelocity;

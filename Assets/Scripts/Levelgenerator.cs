@@ -11,25 +11,24 @@ public class Levelgenerator : MonoBehaviour
     public Transform player; 
 
     private Vector3 lastEndPosition;
-private void Awake() {
-    lastEndPosition = Start.Find("EndPosition").position;
-}
-private void Update() {
-    if(player == null) return;
-    
-    if(Vector3.Distance(player.position,lastEndPosition) < 50){
-        SpawnLevelPart();
+    private void Awake() {
+        lastEndPosition = Start.Find("EndPosition").position;
     }
-}
+    private void Update() {
+        if(player == null) return;
+        
+        if(Vector3.Distance(player.position,lastEndPosition) < 50){
+            SpawnLevelPart();
+        }
+    }
 
-private void SpawnLevelPart() {
-    Transform chosenLevelPart = LevelPartList[Random.Range(0, LevelPartList.Count)];
-    Transform lastLevelPartTransform = SpawnLevelPart(chosenLevelPart, lastEndPosition);
-    lastEndPosition = lastLevelPartTransform.Find("EndPosition").position;
-}
-private Transform SpawnLevelPart(Transform levelPart, Vector3 spawnPosition){
-     Transform levelPartTransform = Instantiate(levelPart, spawnPosition, Quaternion.identity);
-     return levelPartTransform;
-}
-
+    private void SpawnLevelPart() {
+        Transform chosenLevelPart = LevelPartList[Random.Range(0, LevelPartList.Count)];
+        Transform lastLevelPartTransform = SpawnLevelPart(chosenLevelPart, lastEndPosition);
+        lastEndPosition = lastLevelPartTransform.Find("EndPosition").position;
+    }
+    private Transform SpawnLevelPart(Transform levelPart, Vector3 spawnPosition){
+        Transform levelPartTransform = Instantiate(levelPart, spawnPosition, Quaternion.identity);
+        return levelPartTransform;
+    }
 }

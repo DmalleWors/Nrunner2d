@@ -1066,7 +1066,7 @@ MonoBehaviour:
   PlatformlayerMask:
     serializedVersion: 2
     m_Bits: 64
-  Speed: 1500
+  Speed: 700
   animator: {fileID: 0}
   deathtext: {fileID: 769636412}
 --- !u!61 &1476898798
